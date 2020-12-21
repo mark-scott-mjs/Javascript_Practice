@@ -1,0 +1,11 @@
+function caesarsCipher(str) {
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  return str.split('').map(char => {
+    const position = alphabet.indexOf(char);
+
+    return position >= 0 ? alphabet[(position + 13) % 26] : char;
+  }).join('');
+}
+
+rot13("SERR PBQR PNZC");
